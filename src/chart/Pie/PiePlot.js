@@ -21,6 +21,71 @@ class PiePlot extends React.Component {
     };
   }
 
+  static defaultProps = {
+
+    //== defaultProps
+    data: {label: 'No data available', values: [{x: 'No data available', y: 1}]},
+    margin: {top: 0, bottom: 0, left: 0, right: 0},
+    xScale: null,
+    yScale: null,
+    colorScale: d3.scale.category20(),
+    //== accessor
+    label: stack => stack.label,
+    values: stack => stack.values,
+    x: e => e.x,
+    y: e => e.y,
+    y0: () => 0,
+    //== tooltip
+    tooltipMode: 'mouse',
+    tooltipOffset: {top: 0, left: 0},
+    tooltipHtml: null,
+    tooltipContained: false,
+
+    // ====
+    innerRadius: null,
+    outerRadius: null,
+    labelRadius: null,
+    padRadius: 'auto',
+    cornerRadius: 0,
+    sort: undefined,
+    hideLabels: false
+  };
+
+  static propTypes = {
+    data: oneOfType([object, array]).isRequired,
+    height: number.isRequired,
+    width: number.isRequired,
+    margin: shape({
+      top: number,
+      bottom: number,
+      left: number,
+      right: number
+    }),
+    xScale: func,
+    yScale: func,
+    colorScale: func,
+    //==
+    label: func,
+    values: func,
+    x: func,
+    y: func,
+    y0: func,
+    //==
+    tooltipHtml: func,
+    tooltipMode: oneOf(['mouse', 'element', 'fixed']),
+    tooltipContained: bool,
+    tooltipOffset: objectOf(number),
+
+    // ====
+    innerRadius: number,
+    outerRadius: number,
+    labelRadius: number,
+    padRadius: string,
+    cornerRadius: number,
+    sort: any,
+    hideLabels: bool
+  };
+
   componentDidMount() {
     this._svgNode = ReactDOM.findDOMNode(this).getElementsByTagName('svg')[0];
   }
@@ -231,70 +296,5 @@ class PiePlot extends React.Component {
     );
   }
 }
-
-PiePlot.defaultProps = {
-
-  //== defaultProps
-  data: {label: 'No data available', values: [{x: 'No data available', y: 1}]},
-  margin: {top: 0, bottom: 0, left: 0, right: 0},
-  xScale: null,
-  yScale: null,
-  colorScale: d3.scale.category20(),
-  //== accessor
-  label: stack => stack.label,
-  values: stack => stack.values,
-  x: e => e.x,
-  y: e => e.y,
-  y0: () => 0,
-  //== tooltip
-  tooltipMode: 'mouse',
-  tooltipOffset: {top: 0, left: 0},
-  tooltipHtml: null,
-  tooltipContained: false,
-
-  // ====
-  innerRadius: null,
-  outerRadius: null,
-  labelRadius: null,
-  padRadius: 'auto',
-  cornerRadius: 0,
-  sort: undefined,
-  hideLabels: false
-};
-
-PiePlot.propTypes = {
-  data: oneOfType([object, array]).isRequired,
-  height: number.isRequired,
-  width: number.isRequired,
-  margin: shape({
-    top: number,
-    bottom: number,
-    left: number,
-    right: number
-  }),
-  xScale: func,
-  yScale: func,
-  colorScale: func,
-  //==
-  label: func,
-  values: func,
-  x: func,
-  y: func,
-  y0: func,
-  //==
-  tooltipHtml: func,
-  tooltipMode: oneOf(['mouse', 'element', 'fixed']),
-  tooltipContained: bool,
-  tooltipOffset: objectOf(number),
-
-  // ====
-  innerRadius: number,
-  outerRadius: number,
-  labelRadius: number,
-  padRadius: string,
-  cornerRadius: number,
-  sort: any,
-  hideLabels: bool
-};
 
 export default PiePlot;

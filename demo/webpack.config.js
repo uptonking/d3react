@@ -32,14 +32,23 @@ module.exports = {
 
   module: {
 
-    loaders: [{
-      test: /\.js$/,
-      loaders: ['babel-loader'],
+    rules: [{
+      test: /\.(js|jsx)$/,
       include: [
         __dirname,
         path.join(__dirname, '..', 'src'),
       ],
+      use: {
+        loader: 'babel-loader',
+        // query: {
+        //   plugins: ['lodash'],
+        // },
+      },
     }],
 
+
+
   },
+
+
 };

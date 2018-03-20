@@ -29,6 +29,7 @@ start from [http://localhost:3000](http://localhost:3000)
 
 ## todo
 #### 2018
+- [ ] 公共属性和初始化使用 高阶组件代替 mixins
 - [ ] pie plot 添加响应式
 - [ ] pie plot 中间默认显示最大扇形的信息
 - [ ] pie plot 添加legend

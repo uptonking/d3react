@@ -18,17 +18,20 @@ const config = {
 
   module: {
 
-    loaders: [{
+    rules: [{
       test: /\.(js|jsx)$/,
       exclude: /node_modules/,
       include: [
         path.resolve(__dirname, 'src'),
       ],
-      loader: 'babel-loader',
-      query: {
-        plugins: ['lodash'],
+      use:{
+        loader: 'babel-loader',
+        // query: {
+        //   plugins: ['lodash'],
+        // },
       },
     }],
+
   },
 
   plugins: [
