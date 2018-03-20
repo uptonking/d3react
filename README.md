@@ -1,13 +1,12 @@
 # d3react  
-reusable chart components built with react & d3    
+reusable chart components built with d3 & react    
 borrowed some code and ideas from [codesuki/react-d3-components](https://github.com/codesuki/react-d3-components) and [recharts/recharts](https://github.com/recharts/recharts)  
 
  :warning: d3react is still under development, not stable enough to be used yet. 
 
 ## overview
 
-d3react is an **interactive** chart library built with [React](https://facebook.github.io/react/) and [D3](http://d3js.org).
-
+d3react is an **interactive** chart library built with [D3](http://d3js.org) and [React](https://facebook.github.io/react/).  
 The main purpose of this library is to make developers and users happy when writing charts in React. Main principles of d3react are:
 
 - **Simple & Easy** to use with React components
@@ -43,9 +42,9 @@ start from [http://localhost:3000](http://localhost:3000)
 - [ ] 嵌套高阶组件改为 lodash flowRight()
 
 #### remind
-- [*] pie simple
-- [*] line simple
-- [*] bar simple
+- [x] pie simple
+- [x] line simple
+- [x] bar simple
 - [ ] scatter simple
 - [ ] area simple
 - [ ] tree simple
@@ -54,6 +53,7 @@ start from [http://localhost:3000](http://localhost:3000)
 - [ ] funnel simple
 - [ ] sankey simple
 - [ ] boxplot simple
+- [ ] migrate to d3 v5.x
 
 ## usage
 
