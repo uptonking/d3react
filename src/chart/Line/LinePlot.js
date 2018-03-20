@@ -354,7 +354,6 @@ class LinePlot extends React.Component {
 
     // console.log('====props LinePlot');
     // console.log(this.props)
-    // console.log(this)
 
     const {
       height,

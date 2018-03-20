@@ -1,12 +1,12 @@
-# d3react  
-reusable chart components built with d3 & react.    
+# greact  
+interactive chart components built with d3 & react.    
 borrowed some code and ideas from [codesuki/react-d3-components](https://github.com/codesuki/react-d3-components) and [recharts/recharts](https://github.com/recharts/recharts).    
 
- :warning: d3react is still under development, not stable enough to be used yet. 
+ :warning: greact is still under development, not stable enough to be used yet. 
 
 ## overview
-d3react is an **interactive** chart library built with [D3](http://d3js.org) and [React](https://facebook.github.io/react/).  
-The main purpose of this library is to make developers and users happy when writing charts in React. Main principles of d3react are:
+greact is an **interactive** chart library built with [D3](http://d3js.org) and [React](https://facebook.github.io/react/).  
+The main purpose of this library is to make developers and users happy when writing charts in React. Main principles of greact are:
 
 - **Simple & Easy** to use with React components
 - **Interactive** charting experience
@@ -14,8 +14,8 @@ The main purpose of this library is to make developers and users happy when writ
 
 ## dev 
 ```sh
- git clone https://github.com/uptonking/d3react.git
- cd d3react/
+ git clone https://github.com/uptonking/greact.git
+ cd greact/
  npm install
  npm run build
 ```
@@ -86,7 +86,7 @@ start from [http://localhost:3000](http://localhost:3000)
       ]
     };
 ```
-[使用组件示例](https://github.com/uptonking/d3react/demo/component/plot/PiePlotDemo.js)  
+[使用组件示例](https://github.com/uptonking/greact/blob/master/demo/component/plot/PiePlotDemo.js)  
 ```js
  <PiePlot
           data={data}
@@ -101,7 +101,7 @@ start from [http://localhost:3000](http://localhost:3000)
 ```
 
 #### LinePlot  
-[使用组件示例](https://github.com/uptonking/d3react/demo/component/plot/LinePlotDemo.js)   
+[使用组件示例](https://github.com/uptonking/greact/blob/master/demo/component/plot/LinePlotDemo.js)   
 ```js
  <LinePlot
           data={data}
@@ -118,7 +118,7 @@ start from [http://localhost:3000](http://localhost:3000)
 ```  
 
 #### BarPlot  
-[使用组件示例](https://github.com/uptonking/d3react/demo/component/plot/BarPlotDemo.js)     
+[使用组件示例](https://github.com/uptonking/greact/blob/master/demo/component/plot/BarPlotDemo.js)     
 ```js
   <BarPlot
           data={data1}
@@ -131,7 +131,7 @@ start from [http://localhost:3000](http://localhost:3000)
 ```
 
 #### ScatterPlot  
-[使用组件示例](https://github.com/uptonking/d3react/demo/component/plot/ScatterPlotDemo.js)     
+[使用组件示例](https://github.com/uptonking/greact/blob/master/demo/component/plot/ScatterPlotDemo.js)     
 ```js
   <ScatterPlot
            data={data}
@@ -144,7 +144,7 @@ start from [http://localhost:3000](http://localhost:3000)
          />
 ```
 #### AreaPlot  
-[使用组件示例](https://github.com/uptonking/d3react/demo/component/plot/AreaPlotDemo.js)     
+[使用组件示例](https://github.com/uptonking/greact/blob/master/demo/component/plot/AreaPlotDemo.js)     
 ```js
    <AreaPlot
           data={data}

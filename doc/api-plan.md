@@ -1,4 +1,4 @@
-# d3react-api
+# api for greact
 d3react库的api设计 
 
 ## 图表通用配置项
@@ -119,16 +119,34 @@ d3react库的api设计
     
     - watermark: opacity, encrypted
     
-    - export csv、xlsx
-    - export png
-    - extract data
     - sampling
     
     - share
     
     - switch to Bar/Line/Pie
-    
-- responsive
+  
+- export
+    - image
+      - png
+      - jpg
+    - data
+      - csv
+      - xlsx
+      - json
+    - html
+      - html
+      - zip
+      - embed url
+      - svg
+    - presentation
+      - ppt
+      - doc
+    - code
+      - js
+      - python
+      - r
+      
+- responsive  
     - fit 缩放到视口
     - clip 缩放到宽度，并裁剪
 

@@ -136,6 +136,9 @@ class PiePlot extends React.Component {
 
   render() {
 
+    // console.log('====props PiePlot')
+    // console.log(this.props);
+
     const {
       data,
       width,
@@ -158,10 +161,6 @@ class PiePlot extends React.Component {
       outerRadius,
       labelRadius
     } = this.props;
-
-    // console.log('====props PiePlot')
-    // console.log(this.props);
-    // console.log(this.state.tooltip.hidden);
 
     const innerWidth = width - margin.left - margin.right;
     const innerHeight = height - margin.top - margin.bottom;

@@ -5,7 +5,7 @@
 
 #### new
 
-- 3 basic plots: pie, line, bar  
+- 5 basic plots: pie, line, bar  
 - simple tooltip 
 
 #### fix

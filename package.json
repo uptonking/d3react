@@ -1,5 +1,5 @@
 {
-  "name": "d3react",
+  "name": "greact",
   "version": "0.0.1",
   "description": "reusable chart with react and d3",
   "main": "lib/index",

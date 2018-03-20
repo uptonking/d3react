@@ -1,6 +1,6 @@
-# Contributing to d3react
+# Contributing to greact
 
-We'd love for you to contribute to our source code and to make d3react even better than it is today! Here are the guidelines we'd like you to follow:
+We'd love for you to contribute to our source code and to make greact even better than it is today! Here are the guidelines we'd like you to follow:
 
 + [Issues and Bugs](#issues)
 + [Pull Requests](#pr)
@@ -11,7 +11,7 @@ We'd love for you to contribute to our source code and to make d3react even bett
 
 ### Where to Find Known Issues
 
-We will be using [GitHub Issues](https://github.com/uptonking/d3react/issues) for our public bugs. We will keep a close eye on this and try to make it clear when we have an internal fix in progress. Before filing a new task, try to make sure your problem doesn't already exist.
+We will be using [GitHub Issues](https://github.com/uptonking/greact/issues) for our public bugs. We will keep a close eye on this and try to make it clear when we have an internal fix in progress. Before filing a new task, try to make sure your problem doesn't already exist.
 
 ### Reporting New Issues
 
@@ -24,7 +24,7 @@ The best way to get your bug fixed is to provide a reduced test case. jsFiddle  
 
 *Before* submitting a pull request, please make sure the following is done…
 
-+ Search [GitHub](https://github.com/recharts/recharts/pulls) for an open or closed Pull Request that relates to your submission. You don't want to duplicate effort.
++ Search for an open or closed Pull Request that relates to your submission. You don't want to duplicate effort.
 
 + Fork the repo and create your branch from `master`.
 + If you've added code that should be **tested**, add tests!
@@ -51,4 +51,4 @@ However, there are still some styles that the linter cannot pick up. If you are 
 
 ## <a name="license"></a>License
 
-By contributing to Recharts, you agree that your contributions will be licensed under its MIT license.
+By contributing to greact, you agree that your contributions will be licensed under its MIT license.
