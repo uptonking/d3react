@@ -1,6 +1,6 @@
 # d3react  
 reusable chart components built with d3 & react    
-borrowed some code and ideas from [codesuki/react-d3-components](https://github.com/codesuki/react-d3-components) and [recharts/recharts](https://github.com/recharts/recharts)  
+borrowed some code and ideas from [codesuki/react-d3-components](https://github.com/codesuki/react-d3-components) and [recharts/recharts](https://github.com/recharts/recharts).    
 
  :warning: d3react is still under development, not stable enough to be used yet. 
 
@@ -33,6 +33,7 @@ start from [http://localhost:3000](http://localhost:3000)
 ## todo
 
 #### 2018
+- [ ] area plot 通过tooltip添加crosshair，type包括x,y,cross,rect
 - [ ] pie plot 添加响应式
 - [ ] pie plot 饼状图data要取x、y， 需要添加原始数据k、v自动转换成x、y的函数
 - [ ] tooltip位置限制在svg内
@@ -45,14 +46,28 @@ start from [http://localhost:3000](http://localhost:3000)
 - [x] pie simple
 - [x] line simple
 - [x] bar simple
-- [ ] scatter simple
-- [ ] area simple
+- [x] scatter simple
+- [x] area simple
+- [ ] bar + line
+- [ ] bar horizontal 
+- [ ] bar stack percent 
+- [ ] bar waterfall 
+- [ ] line smooth 
+- [ ] gauge 
+- [ ] funnel simple
 - [ ] tree simple
 - [ ] heatmap simple
 - [ ] radar simple
-- [ ] funnel simple
 - [ ] sankey simple
 - [ ] boxplot simple
+
+- [ ] big title 
+- [ ] table 
+
+- [ ] map simple
+
+- [ ] rfm
+
 - [ ] migrate to d3 v5.x
 
 ## usage
@@ -82,7 +97,7 @@ start from [http://localhost:3000](http://localhost:3000)
 ```
 
 #### LinePlot  
-[使用组件示例]((https://github.com/uptonking/d3react/demo/compolent/plot/LinePlotDemo.js))  
+[使用组件示例](https://github.com/uptonking/d3react/demo/compolent/plot/LinePlotDemo.js)   
 ```js
  <LinePlot
           data={data}
@@ -99,7 +114,7 @@ start from [http://localhost:3000](http://localhost:3000)
 ```  
 
 #### BarPlot  
-[使用组件示例]((https://github.com/uptonking/d3react/demo/compolent/plot/BarPlotDemo.js))  
+[使用组件示例](https://github.com/uptonking/d3react/demo/compolent/plot/BarPlotDemo.js)     
 ```js
   <BarPlot
           data={data1}
@@ -110,6 +125,11 @@ start from [http://localhost:3000](http://localhost:3000)
           colorByLabel={false}
         />
 ```
+
+
+## License
+
+[MIT](http://opensource.org/licenses/MIT)
 
 
 

@@ -56,3 +56,5 @@ export ComposedChart from './chart/ComposedChart';
 export PiePlot from './chart/Pie/PiePlot';
 export LinePlot from './chart/Line/LinePlot';
 export BarPlot from './chart/Bar/BarPlot';
+export ScatterPlot from './chart/Scatter/ScatterPlot';
+export AreaPlot from './chart/Area/AreaPlot';

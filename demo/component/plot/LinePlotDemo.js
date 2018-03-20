@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {LinePlot} from 'recharts';
 // import {changeNumberOfData} from './utils';
 
+import {numNumArrObjArr4AreaStacked} from "../../data/SamplePlotData";
 
 export default class LinePlotDemo extends Component {
 
@@ -9,34 +10,7 @@ export default class LinePlotDemo extends Component {
 
   render() {
 
-    const data = [
-      {
-        label: 'somethingA',
-        values: [
-          {x: 0, y: 0},
-          {x: 1.3, y: 5},
-          {x: 3, y: 6},
-          {x: 3.5, y: 6.5},
-          {x: 4, y: 6},
-          {x: 4.5, y: 6},
-          {x: 5, y: 7},
-          {x: 5.5, y: 8}
-        ]
-      },
-      {
-        label: 'somethingB',
-        values: [
-          {x: 0, y: 3},
-          {x: 1.3, y: 4},
-          {x: 3, y: 7},
-          {x: 3.5, y: 8},
-          {x: 4, y: 7},
-          {x: 4.5, y: 7},
-          {x: 5, y: 7.8},
-          {x: 5.5, y: 9}
-        ]
-      }
-    ];
+    const data = numNumArrObjArr4AreaStacked;
 
     const dashFunc = function (label) {
       if (label === "somethingA") {

@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {PiePlot} from 'recharts';
 // import {changeNumberOfData} from './utils';
 
+import {strNumArrObj4Pie} from "../../data/SamplePlotData";
 
 export default class PiePlotDemo extends Component {
 
@@ -13,16 +14,7 @@ export default class PiePlotDemo extends Component {
       return y.toString();
     };
 
-    const data = {
-      label: '事例一',
-      values: [
-        {x: '事例四', y: 13},
-        {x: '事例一', y: 40},
-        {x: '事例五', y: 9},
-        {x: '事例二', y: 21},
-        {x: '事例三', y: 17}
-      ]
-    };
+    const data = strNumArrObj4Pie;
 
     return (
       <div>

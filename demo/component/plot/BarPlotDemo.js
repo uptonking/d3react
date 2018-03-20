@@ -2,54 +2,23 @@ import React, {Component} from 'react';
 import {BarPlot} from 'recharts';
 // import {changeNumberOfData} from './utils';
 
+import {strNumArrObj4Pie, strNumArrObjArr4Bar} from "../../data/SamplePlotData";
 
 export default class BarPlotDemo extends Component {
 
   static displayName = 'BarPlotDemo';
 
   render() {
+
     const tooltip = function (x, y0, y, total) {
       return y.toString();
     }
 
     // ==== option for plot1 - simple bar
-
-    const data1 = [{
-      label: 'somethingA',
-      values: [
-        {x: 'SomethingA', y: 10},
-        {x: 'SomethingB', y: 4},
-        {x: 'SomethingC', y: 3},
-        {x: 'SomethingD', y: 3}]
-    }];
+    const data1 = strNumArrObj4Pie;
 
     // ==== option for plot2,3 - grouped ,stacked bar
-    const data2 = [
-      {
-        label: 'somethingA',
-        values: [
-          {x: 'SomethingA', y: 10},
-          {x: 'SomethingB', y: 4},
-          {x: 'SomethingC', y: -3}
-        ]
-      },
-      {
-        label: 'somethingB',
-        values: [
-          {x: 'SomethingA', y: 5},
-          {x: 'SomethingB', y: 8},
-          {x: 'SomethingC', y: -5}
-        ]
-      },
-      {
-        label: 'somethingC',
-        values: [
-          {x: 'SomethingA', y: 6},
-          {x: 'SomethingB', y: 7},
-          {x: 'SomethingC', y: 5}
-        ]
-      }
-    ];
+    const data2 = strNumArrObjArr4Bar;
 
     return (
       <div>

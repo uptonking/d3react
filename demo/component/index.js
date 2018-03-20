@@ -27,6 +27,8 @@ import Sankey from './Sankey';
 import PiePlotDemo from './plot/PiePlotDemo';
 import LinePlotDemo from './plot/LinePlotDemo';
 import BarPlotDemo from './plot/BarPlotDemo';
+import ScatterPlotDemo from './plot/ScatterPlotDemo';
+import AreaPlotDemo from './plot/AreaPlotDemo';
 
 import ResponsiveContainer from './ResponsiveContainer';
 
@@ -45,7 +47,8 @@ export default {
     PiePlotDemo,
     LinePlotDemo,
     BarPlotDemo,
-
+    ScatterPlotDemo,
+    AreaPlotDemo,
   },
 
   polar: {
