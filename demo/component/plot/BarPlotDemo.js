@@ -52,6 +52,7 @@ export default class BarPlotDemo extends Component {
           tooltipHtml={tooltip}
           tooltipMode={'element'}
         />
+
       </div>
     );
   }

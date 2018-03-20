@@ -23,8 +23,8 @@ class ScatterPlot extends React.Component {
   }
 
   componentWillMount() {
-    console.log('====LinePlot componentWillMount')
-    console.log(this.props)
+    // console.log('====ScatterPlot componentWillMount')
+    // console.log(this.props)
 
     this._calculateInner(this.props);
 

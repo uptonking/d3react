@@ -49,6 +49,7 @@ export default class LinePlotDemo extends Component {
           shapeColor={"red"}
           stroke={{strokeDasharray: dashFunc, strokeWidth: widthFunc}}
         />
+
       </div>
     );
   }

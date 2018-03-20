@@ -30,6 +30,7 @@ export default class PiePlotDemo extends Component {
           tooltipHtml={tooltipPie}
           sort={null}
         />
+
       </div>
     );
   }

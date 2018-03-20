@@ -1,11 +1,10 @@
 # d3react  
-reusable chart components built with d3 & react    
+reusable chart components built with d3 & react.    
 borrowed some code and ideas from [codesuki/react-d3-components](https://github.com/codesuki/react-d3-components) and [recharts/recharts](https://github.com/recharts/recharts).    
 
  :warning: d3react is still under development, not stable enough to be used yet. 
 
 ## overview
-
 d3react is an **interactive** chart library built with [D3](http://d3js.org) and [React](https://facebook.github.io/react/).  
 The main purpose of this library is to make developers and users happy when writing charts in React. Main principles of d3react are:
 
@@ -14,7 +13,6 @@ The main purpose of this library is to make developers and users happy when writ
 - **Dynamic** data update support
 
 ## dev 
-
 ```sh
  git clone https://github.com/uptonking/d3react.git
  cd d3react/
@@ -23,7 +21,6 @@ The main purpose of this library is to make developers and users happy when writ
 ```
 
 ## demo
-
 ```sh
  npm run demo
 ```
@@ -31,14 +28,19 @@ The main purpose of this library is to make developers and users happy when writ
 start from [http://localhost:3000](http://localhost:3000)
 
 ## todo
-
 #### 2018
-- [ ] area plot 通过tooltip添加crosshair，type包括x,y,cross,rect
 - [ ] pie plot 添加响应式
+- [ ] pie plot 中间默认显示最大扇形的信息
+- [ ] pie plot 添加legend
 - [ ] pie plot 饼状图data要取x、y， 需要添加原始数据k、v自动转换成x、y的函数
-- [ ] tooltip位置限制在svg内
+- [ ] bar plot 水平与竖直方向切换
+- [ ] bar plot 水平堆叠
+- [ ] area plot 通过tooltip添加crosshair，type包括x,y,cross,rect
+- [ ] tooltip 位置微调
 
 #### 201x
+- [ ] 添加方法： 生成同一个颜色的不同等级
+- [ ] demo主页加载太慢，要减小打包体积
 - [ ] hover时变大或变长，鼠标移出还原
 - [ ] 嵌套高阶组件改为 lodash flowRight()
 
@@ -48,20 +50,21 @@ start from [http://localhost:3000](http://localhost:3000)
 - [x] bar simple
 - [x] scatter simple
 - [x] area simple
-- [ ] bar + line
 - [ ] bar horizontal 
+- [ ] bar + line
 - [ ] bar stack percent 
 - [ ] bar waterfall 
 - [ ] line smooth 
 - [ ] gauge 
 - [ ] funnel simple
+- [ ] radar simple
 - [ ] tree simple
 - [ ] heatmap simple
-- [ ] radar simple
 - [ ] sankey simple
 - [ ] boxplot simple
 
 - [ ] big title 
+- [ ] word cloud 
 - [ ] table 
 
 - [ ] map simple
@@ -72,7 +75,7 @@ start from [http://localhost:3000](http://localhost:3000)
 
 ## usage
 
-#### PiePLot  
+#### PiePlot  
 准备数据  
 ```js
     const data = {
@@ -83,7 +86,7 @@ start from [http://localhost:3000](http://localhost:3000)
       ]
     };
 ```
-[使用组件示例](https://github.com/uptonking/d3react/demo/compolent/plot/PiePlotDemo.js)  
+[使用组件示例](https://github.com/uptonking/d3react/demo/component/plot/PiePlotDemo.js)  
 ```js
  <PiePlot
           data={data}
@@ -94,10 +97,11 @@ start from [http://localhost:3000](http://localhost:3000)
           tooltipOffset={{top: 210, left: 280}}
           tooltipHtml={tooltipPie}
           sort={null}
+        />
 ```
 
 #### LinePlot  
-[使用组件示例](https://github.com/uptonking/d3react/demo/compolent/plot/LinePlotDemo.js)   
+[使用组件示例](https://github.com/uptonking/d3react/demo/component/plot/LinePlotDemo.js)   
 ```js
  <LinePlot
           data={data}
@@ -114,7 +118,7 @@ start from [http://localhost:3000](http://localhost:3000)
 ```  
 
 #### BarPlot  
-[使用组件示例](https://github.com/uptonking/d3react/demo/compolent/plot/BarPlotDemo.js)     
+[使用组件示例](https://github.com/uptonking/d3react/demo/component/plot/BarPlotDemo.js)     
 ```js
   <BarPlot
           data={data1}
@@ -126,6 +130,30 @@ start from [http://localhost:3000](http://localhost:3000)
         />
 ```
 
+#### ScatterPlot  
+[使用组件示例](https://github.com/uptonking/d3react/demo/component/plot/ScatterPlotDemo.js)     
+```js
+  <ScatterPlot
+           data={data}
+           width={400}
+           height={400}
+           margin={{top: 10, bottom: 50, left: 50, right: 10}}
+           tooltipHtml={tooltipScatter}
+           xAxis={{innerTickSize: 6, label: "x-label"}}
+           yAxis={{label: "y-label"}}
+         />
+```
+#### AreaPlot  
+[使用组件示例](https://github.com/uptonking/d3react/demo/component/plot/AreaPlotDemo.js)     
+```js
+   <AreaPlot
+          data={data}
+          width={400}
+          height={400}
+          margin={{top: 10, bottom: 50, left: 50, right: 10}}
+          tooltipHtml={tooltipArea}
+        />
+```
 
 ## License
 

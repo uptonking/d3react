@@ -28,6 +28,7 @@ export default class ScatterPlotDemo extends Component {
           xAxis={{innerTickSize: 6, label: "x-label"}}
           yAxis={{label: "y-label"}}
         />
+
       </div>
     );
   }
