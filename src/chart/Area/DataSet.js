@@ -9,6 +9,14 @@ const {string, number, bool, func, array} = PropTypes;
  */
 class DataSet extends React.Component {
 
+  static propTypes = {
+    data: array.isRequired,
+    area: func.isRequired,
+    line: func.isRequired,
+    colorScale: func.isRequired,
+    stroke: func.isRequired,
+  };
+  
   render() {
     const {
       data,
@@ -17,7 +25,7 @@ class DataSet extends React.Component {
       values,
       label,
       onMouseEnter,
-      onMouseLeave
+      onMouseLeave,
     } = this.props;
 
     const areas = data.map((stack, index) =>
@@ -37,13 +45,5 @@ class DataSet extends React.Component {
   }
 
 }
-
-DataSet.propTypes = {
-  data: array.isRequired,
-  area: func.isRequired,
-  line: func.isRequired,
-  colorScale: func.isRequired,
-  stroke: func.isRequired
-};
 
 export default DataSet;

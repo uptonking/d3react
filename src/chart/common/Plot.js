@@ -8,7 +8,20 @@ const {number, shape} = PropTypes;
  */
 class Plot extends React.Component {
 
+  static propTypes = {
+    height: number.isRequired,
+    width: number.isRequired,
+    margin: shape({
+      top: number,
+      bottom: number,
+      left: number,
+      right: number,
+    }).isRequired
+  };
+
   render() {
+    // console.log('====props Plot');
+    // console.log(this.props);
 
     const {
       width,
@@ -16,7 +29,7 @@ class Plot extends React.Component {
       margin,
       viewBox,
       preserveAspectRatio,
-      children
+      children,
     } = this.props;
 
     return (
@@ -35,15 +48,5 @@ class Plot extends React.Component {
   }
 }
 
-Plot.propTypes = {
-  height: number.isRequired,
-  width: number.isRequired,
-  margin: shape({
-    top: number,
-    bottom: number,
-    left: number,
-    right: number
-  }).isRequired
-};
 
 export default Plot;

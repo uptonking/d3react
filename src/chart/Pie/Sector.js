@@ -8,12 +8,17 @@ const {string} = PropTypes;
  */
 class Sector extends React.Component {
 
+  static propTypes = {
+    d: string.isRequired,
+    fill: string.isRequired,
+  };
+
+
   render() {
-
-    const {d, data, fill, onMouseEnter, onMouseLeave} = this.props;
-
     // console.log('====props Sector')
     // console.log(this.props)
+
+    const {d, data, fill, onMouseEnter, onMouseLeave,} = this.props;
 
     return (
       <path
@@ -24,11 +29,7 @@ class Sector extends React.Component {
       />
     );
   }
-}
 
-Sector.propTypes = {
-  d: string.isRequired,
-  fill: string.isRequired
-};
+}
 
 export default Sector;

@@ -4,24 +4,43 @@ import PropTypes from 'prop-types';
 const {number, node} = PropTypes;
 
 /**
- * 所有图表的 通用提示
+ * 所有图表的 鼠标提示内容
  */
 class Tooltip extends React.Component {
+
+  static defaultProps = {
+    top: 150,
+    left: 100,
+    html: '',
+    translate: 50,
+  };
+
+  static propTypes = {
+    top: number.isRequired,
+    left: number.isRequired,
+    html: node,
+    translate: number,
+  };
 
   render() {
 
     // console.log('====props Tooltip')
     // console.log(this.props)
 
-    //translate暂未使用
-    const {top, left, hidden, html, translate} = this.props;
+    const {
+      top,
+      left,
+      hidden,
+      html,
+      translate,
+    } = this.props;
 
     const style = {
       display: hidden ? 'none' : 'block',
       position: 'absolute',
       top,
       left,
-      // transform: `translate(-${translate}%, 0)`,
+      transform: `translate(-${translate}%, 0)`,
       pointerEvents: 'none',
       padding: '10px 10px 6px 10px',
       lineHeight: '20px',
@@ -34,23 +53,11 @@ class Tooltip extends React.Component {
 
     };
 
-    //自定义样式可使用 .tooltip{ }
-    return <div className="tooltip" style={style}>{html}</div>;
+    //自定义样式可使用css类选择器 .greact-tooltip { }
+    return <div className="greact-tooltip" style={style}>{html}</div>;
   }
+
 }
 
-Tooltip.defaultProps = {
-  top: 150,
-  left: 100,
-  html: '',
-  translate: 50
-};
-
-Tooltip.propTypes = {
-  top: number.isRequired,
-  left: number.isRequired,
-  html: node,
-  translate: number
-};
 
 export default Tooltip;

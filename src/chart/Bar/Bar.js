@@ -5,7 +5,22 @@ const {number, string, array, object, func, oneOfType} = PropTypes;
 
 class Bar extends React.Component {
 
+  static propTypes = {
+    width: number.isRequired,
+    height: number.isRequired,
+    x: number.isRequired,
+    y: number.isRequired,
+    fill: string.isRequired,
+    data: oneOfType([
+      array,
+      object
+    ]).isRequired,
+    onMouseEnter: func,
+    onMouseLeave: func,
+  }
+
   render() {
+
     const {
       x,
       y,
@@ -14,7 +29,7 @@ class Bar extends React.Component {
       fill,
       data,
       onMouseEnter,
-      onMouseLeave
+      onMouseLeave,
     } = this.props;
 
     return (
@@ -32,18 +47,5 @@ class Bar extends React.Component {
   }
 }
 
-Bar.propTypes = {
-  width: number.isRequired,
-  height: number.isRequired,
-  x: number.isRequired,
-  y: number.isRequired,
-  fill: string.isRequired,
-  data: oneOfType([
-    array,
-    object
-  ]).isRequired,
-  onMouseEnter: func,
-  onMouseLeave: func
-}
 
 export default Bar;

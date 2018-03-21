@@ -29,15 +29,17 @@ start from [http://localhost:3000](http://localhost:3000)
 
 ## todo
 #### 2018
-- [ ] 公共属性和初始化使用 高阶组件代替 mixins
 - [ ] pie plot 添加响应式
 - [ ] pie plot 中间默认显示最大扇形的信息
 - [ ] pie plot 添加legend
 - [ ] pie plot 饼状图data要取x、y， 需要添加原始数据k、v自动转换成x、y的函数
 - [ ] bar plot 水平与竖直方向切换
 - [ ] bar plot 水平堆叠
+- [ ] bar plot 条形图负值文本需要避让
 - [ ] area plot 通过tooltip添加crosshair，type包括x,y,cross,rect
 - [ ] tooltip 位置微调
+- [x] refactor: 用高阶组件代替 mixins
+- [x] 使用静态属性替换defaultProps, propTypes
 
 #### 201x
 - [ ] 添加方法： 生成同一个颜色的不同等级

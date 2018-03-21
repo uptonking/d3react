@@ -5,6 +5,34 @@ const {array, func, oneOf, number, string} = PropTypes;
 
 class Axis extends React.Component {
 
+  static defaultProps = {
+    tickArguments: [10],
+    tickValues: null,
+    tickFormat: null,
+    tickDirection: 'horizontal',
+    innerTickSize: 6,
+    tickPadding: 3,
+    outerTickSize: 6,
+    className: 'axis',
+    zero: 0,
+    label: '',
+  };
+
+  static propTypes = {
+    tickArguments: array,
+    tickValues: array,
+    tickFormat: func,
+    tickDirection: oneOf(['horizontal', 'vertical', 'diagonal']),
+    innerTickSize: number,
+    tickPadding: number,
+    outerTickSize: number,
+    scale: func.isRequired,
+    className: string,
+    zero: number,
+    orientation: oneOf(['top', 'bottom', 'left', 'right']).isRequired,
+    label: string,
+  };
+
   _getTranslateString() {
     const {orientation, height, width, zero} = this.props;
 
@@ -33,6 +61,7 @@ class Axis extends React.Component {
   }
 
   render() {
+
     const {
       height,
       tickArguments,
@@ -46,8 +75,12 @@ class Axis extends React.Component {
       zero,
     } = this.props;
 
-    const {width, className, label} = this.props;
-    let {tickFormat} = this.props;
+    let {
+      width,
+      className,
+      label,
+      tickFormat,
+    } = this.props;
 
     let ticks = tickValues == null
       ? scale.ticks ? scale.ticks.apply(scale, tickArguments) : scale.domain()
@@ -149,33 +182,5 @@ class Axis extends React.Component {
   }
 
 }
-
-Axis.defaultProps = {
-  tickArguments: [10],
-  tickValues: null,
-  tickFormat: null,
-  tickDirection: 'horizontal',
-  innerTickSize: 6,
-  tickPadding: 3,
-  outerTickSize: 6,
-  className: 'axis',
-  zero: 0,
-  label: ''
-};
-
-Axis.propTypes = {
-  tickArguments: array,
-  tickValues: array,
-  tickFormat: func,
-  tickDirection: oneOf(['horizontal', 'vertical', 'diagonal']),
-  innerTickSize: number,
-  tickPadding: number,
-  outerTickSize: number,
-  scale: func.isRequired,
-  className: string,
-  zero: number,
-  orientation: oneOf(['top', 'bottom', 'left', 'right']).isRequired,
-  label: string
-};
 
 export default Axis;

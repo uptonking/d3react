@@ -9,6 +9,12 @@ const {string, number, bool, func, array} = PropTypes;
  */
 class DataSet extends React.Component {
 
+  static propTypes = {
+    data: array.isRequired,
+    line: func.isRequired,
+    colorScale: func.isRequired,
+  };
+
   render() {
 
     const {
@@ -23,25 +29,25 @@ class DataSet extends React.Component {
       values,
       label,
       onMouseEnter,
-      onMouseLeave
+      onMouseLeave,
     } = this.props;
 
     const sizeId = width + 'x' + height;
 
     const lines = data.map((stack, index) =>
       <Path
-      key={`${label(stack)}.${index}`}
-      className={'line'}
-      d={line(values(stack))}
-      stroke={colorScale(label(stack))}
-      strokeWidth={typeof strokeWidth === 'function' ? strokeWidth(label(stack)) : strokeWidth}
-      strokeLinecap={typeof strokeLinecap === 'function' ? strokeLinecap(label(stack)) : strokeLinecap}
-      strokeDasharray={typeof strokeDasharray === 'function' ? strokeDasharray(label(stack)) : strokeDasharray}
-      data={values(stack)}
-      onMouseEnter={onMouseEnter}
-      onMouseLeave={onMouseLeave}
-      style={{clipPath: `url(#lineClip_${sizeId})`}}
-    />);
+        key={`${label(stack)}.${index}`}
+        className={'line'}
+        d={line(values(stack))}
+        stroke={colorScale(label(stack))}
+        strokeWidth={typeof strokeWidth === 'function' ? strokeWidth(label(stack)) : strokeWidth}
+        strokeLinecap={typeof strokeLinecap === 'function' ? strokeLinecap(label(stack)) : strokeLinecap}
+        strokeDasharray={typeof strokeDasharray === 'function' ? strokeDasharray(label(stack)) : strokeDasharray}
+        data={values(stack)}
+        onMouseEnter={onMouseEnter}
+        onMouseLeave={onMouseLeave}
+        style={{clipPath: `url(#lineClip_${sizeId})`}}
+      />);
 
     /*
      The <rect> below is needed in case we want to show the tooltip no matter where on the chart the mouse is.
@@ -73,11 +79,5 @@ class DataSet extends React.Component {
   }
 
 }
-
-DataSet.propTypes = {
-  data: array.isRequired,
-  line: func.isRequired,
-  colorScale: func.isRequired
-};
 
 export default DataSet;

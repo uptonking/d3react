@@ -9,6 +9,18 @@ const {string, number, bool, func, array} = PropTypes;
  */
 class DataSet extends React.Component {
 
+  static propTypes = {
+    data: array.isRequired,
+    xScale: func.isRequired,
+    yScale: func.isRequired,
+    colorScale: func.isRequired,
+    values: func.isRequired,
+    label: func.isRequired,
+    x: func.isRequired,
+    y: func.isRequired,
+    y0: func.isRequired,
+  };
+
   render() {
     const {
       data,
@@ -23,14 +35,14 @@ class DataSet extends React.Component {
       onMouseEnter,
       onMouseLeave,
       groupedBars,
-      colorByLabel
+      colorByLabel,
     } = this.props;
 
     let bars;
     if (groupedBars) {
       bars = data.map((stack, serieIndex) => values(stack).map((e, index) => {
         const yVal = y(e) < 0 ? yScale(0) : yScale(y(e));
-        return(
+        return (
           <Bar
             key={`${label(stack)}.${index}`}
             width={xScale.rangeBand() / data.length}
@@ -68,17 +80,5 @@ class DataSet extends React.Component {
   }
 
 }
-
-DataSet.propTypes = {
-  data: array.isRequired,
-  xScale: func.isRequired,
-  yScale: func.isRequired,
-  colorScale: func.isRequired,
-  values: func.isRequired,
-  label: func.isRequired,
-  x: func.isRequired,
-  y: func.isRequired,
-  y0: func.isRequired
-};
 
 export default DataSet;

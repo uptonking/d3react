@@ -8,6 +8,16 @@ const {string, number, bool, func, array} = PropTypes;
  */
 class DataSet extends React.Component {
 
+  static propTypes = {
+    data: array.isRequired,
+    symbol: func.isRequired,
+    xScale: func.isRequired,
+    yScale: func.isRequired,
+    colorScale: func.isRequired,
+    onMouseEnter: func,
+    onMouseLeave: func,
+  };
+
   render() {
 
     const {
@@ -21,7 +31,7 @@ class DataSet extends React.Component {
       x,
       y,
       onMouseEnter,
-      onMouseLeave
+      onMouseLeave,
     } = this.props;
 
     const circles = data.map(stack => values(stack).map((e, index) => {
@@ -45,14 +55,5 @@ class DataSet extends React.Component {
 
 }
 
-DataSet.propTypes = {
-  data: array.isRequired,
-  symbol: func.isRequired,
-  xScale: func.isRequired,
-  yScale: func.isRequired,
-  colorScale: func.isRequired,
-  onMouseEnter: func,
-  onMouseLeave: func
-};
 
 export default DataSet;

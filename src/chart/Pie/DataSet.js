@@ -9,6 +9,28 @@ const {string, number, bool, func, array} = PropTypes;
  */
 class DataSet extends React.Component {
 
+  static defaultProps = {
+    strokeWidth: 2,
+    stroke: '#000',
+    fill: 'none',
+    opacity: 0.3,
+    hideLabels: false,
+  };
+
+  static propTypes = {
+    pie: array.isRequired,
+    arc: func.isRequired,
+    outerArc: func.isRequired,
+    colorScale: func.isRequired,
+    radius: number.isRequired,
+    strokeWidth: number,
+    stroke: string,
+    fill: string,
+    opacity: number,
+    x: func.isRequired,
+    hideLabels: bool,
+  };
+
   renderLabel(sector) {
 
     const {
@@ -51,6 +73,9 @@ class DataSet extends React.Component {
 
 
   render() {
+    // console.log('====props DataSet')
+    // console.log(this.props)
+
     const {
       pie,
       arc,
@@ -59,11 +84,8 @@ class DataSet extends React.Component {
       y,
       onMouseEnter,
       onMouseLeave,
-      hideLabels
+      hideLabels,
     } = this.props;
-
-    // console.log('====props DataSet')
-    // console.log(this.props)
 
     const sectors = pie.map((e, index) => {
 
@@ -93,26 +115,5 @@ class DataSet extends React.Component {
 
 }
 
-DataSet.defaultProps = {
-  strokeWidth: 2,
-  stroke: '#000',
-  fill: 'none',
-  opacity: 0.3,
-  hideLabels: false
-};
-
-DataSet.propTypes = {
-  pie: array.isRequired,
-  arc: func.isRequired,
-  outerArc: func.isRequired,
-  colorScale: func.isRequired,
-  radius: number.isRequired,
-  strokeWidth: number,
-  stroke: string,
-  fill: string,
-  opacity: number,
-  x: func.isRequired,
-  hideLabels: bool
-};
 
 export default DataSet;

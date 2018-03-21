@@ -5,7 +5,29 @@ const {string, array} = PropTypes;
 
 class Path extends React.Component {
 
+  static defaultProps = {
+    className: 'path',
+    fill: 'none',
+    strokeWidth: '2',
+    strokeLinecap: 'butt',
+    strokeDasharray: 'none',
+  };
+
+  static propTypes = {
+    className: string,
+    stroke: string.isRequired,
+    strokeLinecap: string,
+    strokeWidth: string,
+    strokeDasharray: string,
+    fill: string,
+    d: string.isRequired,
+    data: array.isRequired,
+  };
+
   render() {
+    // console.log('====props Path');
+    // console.log(this.props);
+
     const {
       className,
       stroke,
@@ -17,7 +39,7 @@ class Path extends React.Component {
       style,
       data,
       onMouseEnter,
-      onMouseLeave
+      onMouseLeave,
     } = this.props;
 
     return (
@@ -37,23 +59,5 @@ class Path extends React.Component {
   }
 }
 
-Path.defaultProps = {
-  className: 'path',
-  fill: 'none',
-  strokeWidth: '2',
-  strokeLinecap: 'butt',
-  strokeDasharray: 'none'
-};
-
-Path.propTypes = {
-  className: string,
-  stroke: string.isRequired,
-  strokeLinecap: string,
-  strokeWidth: string,
-  strokeDasharray: string,
-  fill: string,
-  d: string.isRequired,
-  data: array.isRequired
-};
 
 export default Path;
