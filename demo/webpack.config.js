@@ -1,5 +1,7 @@
 var path = require('path');
 var webpack = require('webpack');
+const FileManagerPlugin = require('filemanager-webpack-plugin');
+
 
 module.exports = {
   context: __dirname,
@@ -17,7 +19,17 @@ module.exports = {
   plugins: [
     new webpack.LoaderOptionsPlugin({
       debug: true
-    })
+    }),
+    new FileManagerPlugin({
+      onEnd: [
+        {
+          copy: [
+            //目录是相对于执行npm run demo的根目录，而不是webpack.config.js的位置
+            {source: "./demo/build/bundle.js", destination: "./docs/bundle.js"}
+          ]
+        },
+      ]
+    }),
     // new webpack.HotModuleReplacementPlugin(),
     // new webpack.NoErrorsPlugin()
   ],
@@ -45,7 +57,6 @@ module.exports = {
         // },
       },
     }],
-
 
 
   },

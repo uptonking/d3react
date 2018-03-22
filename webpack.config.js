@@ -1,6 +1,6 @@
 const path = require('path');
-const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
 const webpack = require('webpack');
+const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 const env = process.env.NODE_ENV;
@@ -24,7 +24,7 @@ const config = {
       include: [
         path.resolve(__dirname, 'src'),
       ],
-      use:{
+      use: {
         loader: 'babel-loader',
         // query: {
         //   plugins: ['lodash'],
@@ -42,6 +42,7 @@ const config = {
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(env),
     }),
+
   ],
 
   devtool: 'source-map',

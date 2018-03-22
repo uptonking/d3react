@@ -1,8 +1,8 @@
 # greact  
 interactive chart components built with d3 & react.    
-borrowed some code and ideas from [codesuki/react-d3-components](https://github.com/codesuki/react-d3-components) and [recharts/recharts](https://github.com/recharts/recharts).    
+copied some code and ideas from [codesuki/react-d3-components](https://github.com/codesuki/react-d3-components) and [recharts/recharts](https://github.com/recharts/recharts).    
 
- :warning: greact is still under development, not stable enough to be used yet. 
+ :warning: greact is under active development, far from being stable to be used yet. 
 
 ## overview
 greact is an **interactive** chart library built with [D3](http://d3js.org) and [React](https://facebook.github.io/react/).  
@@ -29,35 +29,38 @@ start from [http://localhost:3000](http://localhost:3000)
 
 ## todo
 #### 2018
-- [ ] pie plot responsive [@see](https://github.com/codesuki/react-d3-components/issues/9)
-- [ ] pie plot 中间默认显示最大扇形的信息
-- [ ] pie plot 添加legend
-- [ ] pie plot 饼上显示数字label
-- [ ] pie plot 饼状图data要取x、y， 需要添加原始数据k、v自动转换成x、y的函数
+- [ ] pie 中间默认显示最大扇形的信息
+- [ ] pie 添加legend
+- [ ] pie 饼上显示数字label
+- [ ] pie 饼状图data要取x、y， 需要添加原始数据k、v自动转换成x、y的函数
+- [ ] pie responsive 缩放时tooltip的位置动态变化 
 
-- [ ] line plot 与 bar plot结合 [@see](https://codesuki.github.io/react-d3-components/transitions/index.html)
+- [ ] line 与 bar 结合 [@see](https://codesuki.github.io/react-d3-components/transitions/index.html)
 
-- [ ] bar plot 水平与竖直方向切换
-- [ ] bar plot 水平堆叠
-- [ ] bar plot 条形图负值文本需要避让
+- [ ] bar 水平与竖直方向切换
+- [ ] bar 水平堆叠
+- [ ] bar 条形图负值文本需要避让
 
-- [ ] area plot 通过tooltip添加crosshair，type包括x,y,cross,rect
+- [ ] area 通过tooltip添加crosshair，type包括x,y,cross,rect
 
 - [ ] tooltip crosshair [@see](https://github.com/codesuki/react-d3-components/issues/16)
 
 - [ ] 添加brush
 - [ ] 分离DataSet [@see](https://github.com/codesuki/react-d3-components/issues/20)
 
+- [x] pie responsive 实现基本放大缩小 
 - [x] refactor: 用高阶组件代替 mixins
 - [x] 使用静态属性替换defaultProps, propTypes
 
 #### 201x
 ###### todo
-- [ ] pie plot 添加动画
-- [ ] bar plot 添加纹理
-- [ ] bar plot grouped 指定各条的宽度
+
+- [ ] pie 添加动画
+- [ ] bar 添加纹理
+- [ ] bar grouped 指定各条的宽度
 - [ ] demo主页加载太慢，要减小打包体积
 
+- [ ] 所有图表添加响应式 [@see](https://github.com/codesuki/react-d3-components/issues/9)
 - [ ] legend 图例 [@see](https://github.com/codesuki/react-d3-components/issues/92)
 - [ ] add title
 - [ ] grid 背景网格

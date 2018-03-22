@@ -33,11 +33,12 @@ class Plot extends React.Component {
     } = this.props;
 
     return (
-      <svg ref="svg"
-           width={width}
+      <svg width={width}
            height={height}
            viewBox={viewBox}
-           preserveAspectRatio={preserveAspectRatio}>
+           preserveAspectRatio={preserveAspectRatio}
+           ref="svg"
+      >
 
         <g transform={`translate(${margin.left}, ${margin.top})`}>
           {children}

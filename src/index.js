@@ -58,3 +58,9 @@ export LinePlot from './chart/Line/LinePlot';
 export BarPlot from './chart/Bar/BarPlot';
 export ScatterPlot from './chart/Scatter/ScatterPlot';
 export AreaPlot from './chart/Area/AreaPlot';
+
+export {PiePlotr} from './chart/common/Plotr';
+export {LinePlotr} from './chart/common/Plotr';
+export {BarPlotr} from './chart/common/Plotr';
+export {ScatterPlotr} from './chart/common/Plotr';
+export {AreaPlotr} from './chart/common/Plotr';

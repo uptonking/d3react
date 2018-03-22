@@ -47,6 +47,7 @@ class PiePlot extends React.Component {
 
     // console.log('====props PiePlot');
     // console.log(this.props);
+    // console.log(this.props.viewBox);
 
     const {
       data,

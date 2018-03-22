@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {BarPlot} from 'recharts';
+import {BarPlot, BarPlotr} from 'recharts';
 // import {changeNumberOfData} from './utils';
 
 import {strNumArrObj4Pie, strNumArrObjArr4Bar} from "../../data/SamplePlotData";
@@ -24,6 +24,16 @@ export default class BarPlotDemo extends Component {
       <div>
         <p>Simple Bar Plot</p>
         <BarPlot
+          data={data1}
+          width={800}
+          height={400}
+          margin={{top: 10, bottom: 50, left: 50, right: 10}}
+          tooltipHtml={tooltip}
+          colorByLabel={false}
+        />
+
+        <p>Simple Bar Plot Responsive</p>
+        <BarPlotr
           data={data1}
           width={800}
           height={400}

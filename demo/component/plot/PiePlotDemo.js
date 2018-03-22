@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {PiePlot} from 'recharts';
+import {PiePlot, PiePlotr} from 'recharts';
 // import {changeNumberOfData} from './utils';
 
 import {strNumArrObj4Pie} from "../../data/SamplePlotData";
@@ -16,20 +16,44 @@ export default class PiePlotDemo extends Component {
 
     const data = strNumArrObj4Pie;
 
+    const styleChartWrapper = {
+      height: 640,
+      width: 640,
+      padding: 10,
+    }
+
     return (
       <div>
-        <p>Simple Pie Plot</p>
-        <PiePlot
-          data={data}
-          width={800}
-          height={480}
-          margin={{top: 10, bottom: 10, left: 100, right: 100}}
+        <h2>Simple Pie Plot</h2>
+        <div>
+          <PiePlot
+            data={data}
+            width={480}
+            height={480}
+            margin={{top: 10, bottom: 10, left: 10, right: 10}}
 
-          tooltipMode={'fixed'}
-          tooltipOffset={{top: 210, left: 280}}
-          tooltipHtml={tooltipPie}
-          sort={null}
-        />
+            tooltipMode={'fixed'}
+            tooltipOffset={{top: 110, left: 140}}
+            tooltipHtml={tooltipPie}
+            sort={null}
+          />
+        </div>
+
+        <h2>Simple Pie Plot Responsive</h2>
+
+        {/*<div style={styleChartWrapper}>*/}
+        <div>
+          <PiePlotr
+            data={data}
+            width={480}
+            height={480}
+            margin={{top: 10, bottom: 10, left: 10, right: 10}}
+            tooltipMode={'fixed'}
+            tooltipOffset={{top: 110, left: 140}}
+            tooltipHtml={tooltipPie}
+            sort={null}
+          />
+        </div>
 
       </div>
     );
