@@ -29,23 +29,50 @@ start from [http://localhost:3000](http://localhost:3000)
 
 ## todo
 #### 2018
-- [ ] pie plot 添加响应式
+- [ ] pie plot responsive [@see](https://github.com/codesuki/react-d3-components/issues/9)
 - [ ] pie plot 中间默认显示最大扇形的信息
 - [ ] pie plot 添加legend
+- [ ] pie plot 饼上显示数字label
 - [ ] pie plot 饼状图data要取x、y， 需要添加原始数据k、v自动转换成x、y的函数
+
+- [ ] line plot 与 bar plot结合 [@see](https://codesuki.github.io/react-d3-components/transitions/index.html)
+
 - [ ] bar plot 水平与竖直方向切换
 - [ ] bar plot 水平堆叠
 - [ ] bar plot 条形图负值文本需要避让
+
 - [ ] area plot 通过tooltip添加crosshair，type包括x,y,cross,rect
-- [ ] tooltip 位置微调
+
+- [ ] tooltip crosshair [@see](https://github.com/codesuki/react-d3-components/issues/16)
+
+- [ ] 添加brush
+- [ ] 分离DataSet [@see](https://github.com/codesuki/react-d3-components/issues/20)
+
 - [x] refactor: 用高阶组件代替 mixins
 - [x] 使用静态属性替换defaultProps, propTypes
 
 #### 201x
-- [ ] 添加方法： 生成同一个颜色的不同等级
+###### todo
+- [ ] pie plot 添加动画
+- [ ] bar plot 添加纹理
+- [ ] bar plot grouped 指定各条的宽度
 - [ ] demo主页加载太慢，要减小打包体积
+
+- [ ] legend 图例 [@see](https://github.com/codesuki/react-d3-components/issues/92)
+- [ ] add title
+- [ ] grid 背景网格
+- [ ] 去掉 recharts
+
+###### later
+- [ ] tooltip 自定义图标
+- [ ] 同一套数据不同图表的切换
 - [ ] hover时变大或变长，鼠标移出还原
+- [ ] 生成同一个颜色的不同等级
 - [ ] 嵌套高阶组件改为 lodash flowRight()
+
+###### maybe
+- [ ] 增强动画annimations
+- [ ] 增强交互性，对不同图表添加onClick()
 
 #### remind
 - [x] pie simple
